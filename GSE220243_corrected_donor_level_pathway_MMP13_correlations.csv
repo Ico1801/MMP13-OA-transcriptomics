@@ -1,5 +1,0 @@
-"score_column","pathway","n_donors","spearman_rho","bootstrap_CI_lower","bootstrap_CI_upper","p_value","FDR","evidence"
-"NFkB_module_score","NF-κB",12,0.182884206667024,-0.811502671200689,-0.0118054081703177,0.569409732617249,0.569409732617249,"Not significant"
-"Inflammatory_module_score","Inflammatory response",12,0.4516120205451,-0.764746719591757,0.269969912908938,0.140537525793845,0.281075051587689,"Not significant"
-"p38_MAPK_module_score","p38 MAPK",12,-0.250066160136543,-0.946228744653904,-0.445049002005641,0.433110270146378,0.569409732617249,"Not significant"
-"ECM_degradation_module_score","ECM degradation",12,0.634496227212123,-0.415692193816531,0.476366968980793,0.0266776480706264,0.106710592282505,"Nominal p < 0.05"
