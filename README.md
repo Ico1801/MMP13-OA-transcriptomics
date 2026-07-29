@@ -1,66 +1,73 @@
-# MMP13-OA-transcriptomics
-This repository contains the R scripts, processed analysis inputs,session information, and workflow documentation supporting the manuscript
-"Context-dependent MMP13 dysregulation in human osteoarthritic cartilage: cross-cohort transcriptomics and single-cell localization"
-## Authors
+# MMP13 Dysregulation in Human Osteoarthritic Cartilage
 
-- Ymelda Agatha Christy Manurung
-- Esra Siburian
+This repository contains the R scripts, analysis-ready data, metadata,
+statistical outputs, figures, and software-environment records supporting
+the manuscript:
 
-Department of Chemical Engineering and Biotechnology,
-National Taipei University of Technology, Taipei, Taiwan.
+> **Context-dependent MMP13 dysregulation in human osteoarthritic cartilage:
+> cross-cohort transcriptomics and single-cell localization**
+
+## Authors and affiliations
+
+**Ymelda Agatha Christy Manurung¹**  
+**Esra Yohanna Siburian²**
+
+¹ Department of Chemical Engineering and Biotechnology,  
+National Taipei University of Technology, Taipei, Taiwan
+
+² Department of Chemical Engineering,  
+National Taiwan University of Science and Technology, Taipei, Taiwan
 
 ## Study overview
 
-The study integrates four human cartilage bulk-transcriptomic cohorts
-(GSE114007, GSE117999, GSE57218, and GSE169077) and one single-cell
-RNA-sequencing cohort (GSE220243).
+This study integrates four publicly available human cartilage bulk-transcriptomic
+cohorts and one single-cell RNA-sequencing cohort:
+
+- GSE114007
+- GSE117999
+- GSE57218
+- GSE169077
+- GSE220243
+
+The study examines whether MMP13 transcript dysregulation in human
+osteoarthritic cartilage is consistent across cohorts, reference tissues,
+study designs, and cartilage cell states.
 
 The analyses include:
 
-- cohort-specific preprocessing and differential-expression analysis;
-- harmonization of MMP13 effect estimates;
+- cohort-specific preprocessing and quality control;
+- differential-expression analysis;
+- harmonization of cohort-specific MMP13 effect estimates;
 - exploratory random-effects meta-analysis;
 - Hallmark and Reactome gene-set enrichment analysis;
-- single-cell RPCA integration and cartilage cell-state annotation;
+- single-cell quality control and RPCA integration;
+- cartilage cell-state annotation;
 - descriptive localization of MMP13-positive cells;
 - donor-level pathway sensitivity analyses.
 
-## Data availability
-
-All raw source data are publicly available from the NCBI Gene Expression
-Omnibus under accession numbers GSE114007, GSE117999, GSE57218,
-GSE169077, and GSE220243.
-
-Raw GEO files are not redistributed in this repository.
-
 ## Repository structure
 
-- `scripts/`: R scripts in recommended execution order.
-- `metadata/`: cohort and sample metadata.
-- `derived_data/`: analysis-ready derived results.
-- `sessionInfo/`: R and package-version records.
-- `figures/`: main and supplementary figure outputs.
-
-## Software
-
-Analyses were conducted in R 4.6.0. Exact package versions are reported
-in the `sessionInfo/` directory.
-
-## Reproducibility
-
-Run the scripts numerically from `00_setup.R` onward. File paths should
-be configured in `00_setup.R`.
-
-## Citation
-
-Please cite the archived Zenodo release associated with this repository.
-
-## License
-
-See the LICENSE file.
-
-## Contact
-
-Ymelda Agatha Christy Manurung  
-Department of Chemical Engineering and Biotechnology  
-National Taipei University of Technology
+```text
+OA_MMP13_Target_Discovery/
+│
+├── data_raw/
+│   └── Raw or downloaded source files used for local analysis.
+│
+├── data_processed/
+│   └── Cleaned, normalized, filtered, or analysis-ready data objects.
+│
+├── metadata/
+│   └── Sample information, cohort annotations, group definitions,
+│       covariates, pairing information, and cell-state labels.
+│
+├── results/
+│   └── Differential-expression results, quality-control outputs,
+│       meta-analysis results, GSEA results, figures, tables,
+│       donor-level summaries, and session-information files.
+│
+├── scripts/
+│   └── R scripts used for data preparation, statistical analysis,
+│       visualization, and generation of manuscript outputs.
+│
+└── OA_MMP13_Target_Discovery.Rproj
+    └── RStudio project file defining the repository root.
